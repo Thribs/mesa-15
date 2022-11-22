@@ -1,5 +1,10 @@
+import axios from "axios";
+
+const getData = async () => await axios("http://localhost:5173/api/products/1").then(response => response.json())
+
 function App() {
-  return <h1>App.js</h1>;
+  const data = getData()
+  return <h1>{data}</h1>
 }
 
 export default App;
